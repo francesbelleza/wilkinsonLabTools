@@ -76,15 +76,57 @@ def main():
 
         # restore categorical Genotype labels on x-axis
         fig.update_layout(
+            margin=dict(l=60, r=160, t=60, b=60),
             xaxis=dict(
                 tickmode="array",
                 tickvals=list(range(len(uniques))),
                 ticktext=list(uniques)
-            )
+            ),
+            showlegend=False
         )
-        fig.update_traces(marker=dict(opacity=0.6, size=10))
+
+        # Style markers with white border for contrast
+        fig.update_traces(marker=dict(opacity=0.8, size=10, line=dict(width=1, color='white')))
+
+        # Add simplified legend annotation in top-right corner (key only)
+        legend_text = (
+            "COLOR KEY<br>🔵 Blue = Male<br>🔴 Red = Female<br>⚪ Grey = Unspecified"
+        )
+        fig.add_annotation(
+            x=1.05, y=0.9,
+            xref='paper', yref='paper',
+            text=legend_text,
+            showarrow=False,
+            align='left',
+            bgcolor='black',
+            bordercolor='white',
+            borderwidth=0.5,
+            borderpad=6,
+            font=dict(size=12, color='white'),
+            xanchor='left',
+            yanchor='top'
+        )
+        # walking legend annotation below color key
+        walking_legend = (
+            "SHAPE KEY<br>◯ Circle = 0<br>◼ Square = 1<br>◆ Diamond = 2"
+        )
+        fig.add_annotation(
+            x=1.05, y=0.60,
+            xref='paper', yref='paper',
+            text=walking_legend,
+            showarrow=False,
+            align='left',
+            bgcolor='black',
+            bordercolor='white',
+            borderwidth=0.5,
+            borderpad=6,
+            font=dict(size=12, color='white'),
+            xanchor='left',
+            yanchor='top'
+        )
 
         st.plotly_chart(fig, use_container_width=True)
+
 
 if __name__ == "__main__":
     main()
