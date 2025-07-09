@@ -5,14 +5,14 @@ import plotly.express as px
 
 # ——— Missteps Scatter Tool ———
 def missteps_scatter_tool():
-    st.button("◀ Back to Tools", on_click=lambda: st.session_state.update(tool=None))
+    st.button("◀ back to tools", on_click=lambda: st.session_state.update(tool=None))
 
     st.header("Missteps Scatterplots")
 
     # 1) Upload-only-CSV
-    uploaded = st.file_uploader("Upload your LadderTestData.csv", type="csv")
+    uploaded = st.file_uploader("upload your csv:", type="csv")
     if not uploaded:
-        st.info("Please upload a CSV file to get started.")
+        st.info("upload a csv file to get started")
         return
 
     # 2) Read & initial clean
@@ -50,14 +50,14 @@ def missteps_scatter_tool():
     all_runs = sorted(df["Run"].unique())
     sel_runs = st.multiselect("Select Run(s)", all_runs, default=all_runs)
     if not sel_runs:
-        st.warning("Please select at least one Run.")
+        st.warning("please select at least one Run.")
         return
 
     # 9) Loop over each Run and plot separately
     for run_name in sel_runs:
         sub = df[df["Run"] == run_name]
         if sub.empty:
-            st.warning(f"No data for Run '{run_name}'.")
+            st.warning(f"no data for Run '{run_name}'.")
             continue
 
         fig = px.scatter(

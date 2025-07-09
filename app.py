@@ -10,7 +10,7 @@ def main():
 
     # 2) buttons
     if st.session_state.tool is None:
-        if st.button("Missteps Scatterplots"):
+        if st.button("missteps scatterplots"):
             st.session_state.tool = "missteps"
         ####add for future button
 
