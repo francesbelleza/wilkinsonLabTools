@@ -10,20 +10,23 @@ Upload your CSV data and get clear, jittered scatter plots by run.
 
 **Features**
 </br>
-- Upload a CSV file with columns: Run, Genotype, Missteps Total, Gender, Walking.
-- Interactive selection of one or more runs via a dropdown.
-- Jittered scatter plots show repeated points without overlap.
-- Color-coded by Gender: 🔵 Male, 🔴 Female, ⚪ Unspecified.
-- Shapes represent walking scores: ◯ (0), ◼ (1), ◆ (2).
-- Custom legend neatly placed in each plot.
+- Landing page interface with *Missteps Scatterplots* button 
+- Upload a CSV file with columns: Run, Genotype, Missteps Total, Gender, Walking
+- Interactive selection of one or more runs via a dropdown
+- Jittered scatter plots show repeated points without overlap
+- Color-coded by Gender: 🔵 Male, 🔴 Female, ⚪ Unspecified
+- Shapes represent walking scores: ◯ (0), ◼ (1), ◆ (2)
+- Custom legend neatly placed in each plot
 
 **Usage**
 
 1. Via Web Browser 
-   - Click the link above. 
-   - Upload your LadderTestData.csv. 
-   - Select the runs you want to visualize. 
-   - View and download the plots.
+   - Click the link above
+   - Click button *Missteps Scatterplots*
+   - Upload your LadderTestData.csv
+   - All graphs will pop up
+   - Option to select the runs you want to visualize
+   - View and download the plots
 
 2. Locally (if you want to edit)
     ```

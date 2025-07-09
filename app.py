@@ -14,7 +14,7 @@ def main():
             st.session_state.tool = "missteps"
         ####add for future button
 
-    # 3) dispatch 
+    # 3) dispatch
     if st.session_state.tool == "missteps":
         missteps_scatter_tool()
 
