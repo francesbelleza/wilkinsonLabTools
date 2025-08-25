@@ -5,7 +5,7 @@ import plotly.express as px
 
 
 # — Wire and Inversion Test Scatter Tool —
-def wire_and_inversion():
+def wire_and_inversion_tool():
     st.button("◀ back to tools", on_click=lambda: st.session_state.update(tool=None))
 
     st.header("Wire Hanging and Inversion Test Scatterplots")

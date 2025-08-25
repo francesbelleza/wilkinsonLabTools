@@ -3,7 +3,8 @@ from tools.front_limbs_missteps import front_limbs_missteps_tool
 from tools.back_limbs_missteps import back_limbs_missteps_tool
 from tools.front_limbs_total_steps import front_limbs_total_steps_tool
 from tools.back_limbs_total_steps import back_limbs_total_steps_tool
-from tools.wire_and_inversion_tool import wire_and_inversion
+from tools.wire_and_inversion_tool import wire_and_inversion_tool
+
 
 def main():
     st.title("Wilkinson Lab Tools")
@@ -48,7 +49,7 @@ def main():
     elif st.session_state.tool == "back_steps":
         back_limbs_total_steps_tool()
     elif st.session_state.tool == "wire_and_inversion":
-        wire_and_inversion()
+        wire_and_inversion_tool()
 
 if __name__ == "__main__":
     main()
