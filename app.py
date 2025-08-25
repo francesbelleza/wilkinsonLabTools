@@ -34,10 +34,8 @@ def main():
                 st.session_state.tool = "back_steps"
 
         st.subheader("Wire and Inversion")
-        col5, = st.columns(1)
-        with col5:
-            if st.button("Wire + Inversion"):
-                st.session_state.tool = "wire_and_inversion"
+        if st.button("Wire + Inversion"):
+            st.session_state.tool = "wire_and_inversion"
 
     # 3) dispatch
     if st.session_state.tool == "front_missteps":
