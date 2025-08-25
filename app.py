@@ -46,7 +46,7 @@ def main():
         front_limbs_total_steps_tool()
     elif st.session_state.tool == "back_steps":
         back_limbs_total_steps_tool()
-    elif st.session_state.tool == "wire_and_inversion":
+    elif st.session_state.tool == "wire_and_inversion_tool":
         wire_and_inversion_tool()
 
 if __name__ == "__main__":
